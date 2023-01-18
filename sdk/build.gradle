@@ -7,6 +7,12 @@ plugins {
 android {
     compileSdk 33
     namespace = "convertedin.sdk.library"
+    publishing {
+        multipleVariants("custom") {
+            includeBuildTypeValues("debug", "release")
+        }
+
+    }
     defaultConfig {
         aarMetadata {
             minCompileSdk = 33
